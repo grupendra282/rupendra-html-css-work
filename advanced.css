@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial,sans-serif;
+    background-color: darksalmon;
+}
+header{
+    background-color:   slateblue;
+    padding: 15px 30px; 
+}
+header > nav{
+    width: 100%;
+
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav > ul{
+    display:flex;
+    justify-content: center;
+    gap: 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+
+}
+nav a::before{
+    content: "*";
+}
+nav li:first-of-type a{
+    color: black;
+}
+nav li:last-of-type a{
+    color: black;
+}
+a[target="_blank"]{
+    color: ;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+nav a:focus{
+    outline:2px solid white;
+}
+section{
+    padding: 30px;
+}
+section > h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+section > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+article{
+    background-color: white;
+    padding: 15px;
+    border: 1px solid white;
+    text-align: center;
+    position: relative;
+}
+article:nth-of-type(odd){
+    background-color: white;
+}
+article:nth-of-type(even){
+    background-color: white;
+}
+article img{
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+}
+article h2 + p{
+    font-weight: bold;
+}
+article h2~ button{
+    border-radius: 6px;
+}
+ article button:hover{
+    background-color: black;
+    color: white;
+}
+article:hover{
+    transform: translateY(-5px);
+}
+article:not(:first-child){
+    border-top:1px solid aqua;
+}
+article::after{
+    content: "PRICE";
+    position:absolute;
+    top: 12px;
+    right: 12px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size:14px;
+}
+footer{
+    padding: 25px;
+    text-align: center;
+    background-color: brown;
+    color: white;
+}
+footer a{
+    color: white;
+    margin:  0 10px;
+}
+footer a +[target="_blank"]::after{
+    content: "↑";
+
+}
+@media(min-width:1204px){
+    section > div 
+    artticle:nth-child(3n){
+        display: none;
+    }
+}
+@media(max-width:950px){
+    section > div{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 610px){
+    section > div {
+        grid-template-columns: 1fr;
+    }
+    nav > ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+button{
+    background-color: green;
+    color: white;
+}
